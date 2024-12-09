@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Kit</title>
+    <style>
+      /* จัดการพื้นหลังและข้อความ */
+      body {
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(
+          to bottom,
+          #050635,
+          #16115b,
+          #2f4788
+        ); /* ไล่สีม่วงพาสเทล */
+        /* display: flex; */
+        /* justify-content: center; */
+        align-items: center;
+        color: #fff;
+        font-family: "Tahoma", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      /* สร้าง Animation ค่อยๆ เฟดขึ้น */
+      .fade-in {
+        opacity: 0; /* เริ่มจากโปร่งใส */
+        animation: fadeIn 2s ease-in-out forwards; /* เรียกใช้ Animation */
+        font-size: 40px; /* ขนาดข้อความ */
+        position: sticky;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        top: 40px;
+        color: white;
+      }
+
+      a:hover {
+        color: rgb(168, 175, 178);
+      }
+
+      a,
+      a:focus,
+      a:active {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* เอฟเฟกต์เฟดสำหรับรูปภาพ */
+      .fade-in-img {
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards 0.5s; /* เริ่มหลังข้อความ 1.5 วินาที */
+        max-width: 500px;
+        position: absolute;
+        top: 800px;
+        border: 6px solid white;
+        left: 50px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของหน้าจอ */
+
+        /* height: auto; */
+        /* margin-top: 20px; เว้นระยะห่างจากข้อความ */
+        border-radius: 10px; /* มุมมนสวยงาม */
+      }
+
+      .content {
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards 0.5s; /* เริ่มหลังข้อความ 1.5 วินาที */
+        max-width: 500px;
+        position: absolute;
+        top: 760px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 40px;
+        left: 550px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของหน้าจอ */
+
+        /* height: auto; */
+        /* margin-top: 20px; เว้นระยะห่างจากข้อความ */
+        border-radius: 10px; /* มุมมนสวยงาม */
+      }
+
+      .profile {
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards 0.5s; /* เริ่มหลังข้อความ 1.5 วินาที */
+        max-width: 500px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        position: absolute;
+        font-size: 20px;
+        top: 920px;
+        left: 700px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของหน้าจอ */
+
+        /* height: auto; */
+        /* margin-top: 20px; เว้นระยะห่างจากข้อความ */
+        border-radius: 10px; /* มุมมนสวยงาม */
+      }
+
+      .edu {
+        opacity: 0;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        animation: fadeIn 0.5s ease-in-out forwards 0.5s; /* เริ่มหลังข้อความ 1.5 วินาที */
+        max-width: 500px;
+        position: absolute;
+        font-size: 20px;
+        top: 1020px;
+        left: 700px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของ /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของหน้าจอ */
+
+        /* height: auto; */
+        /* margin-top: 20px; เว้นระยะห่างจากข้อความ */
+        border-radius: 10px; /* มุมมนสวยงาม */
+      }
+
+      .act {
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards 0.5s; /* เริ่มหลังข้อความ 1.5 วินาที */
+        max-width: 500px;
+        position: absolute;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 20px;
+        top: 1120px;
+        left: 700px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของ /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของหน้าจอ */
+
+        /* height: auto; */
+        /* margin-top: 20px; เว้นระยะห่างจากข้อความ */
+        border-radius: 10px; /* มุมมนสวยงาม */
+      }
+
+      .cer {
+        opacity: 0;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        animation: fadeIn 0.5s ease-in-out forwards 0.5s; /* เริ่มหลังข้อความ 1.5 วินาที */
+        max-width: 500px;
+        position: absolute;
+        font-size: 20px;
+        top: 1220px;
+        left: 700px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของ /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของหน้าจอ */
+
+        /* height: auto; */
+        /* margin-top: 20px; เว้นระยะห่างจากข้อความ */
+        border-radius: 10px; /* มุมมนสวยงาม */
+      }
+
+      .pro1 {
+        opacity: 0;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        animation: fadeIn 0.5s ease-in-out forwards 0.5s; /* เริ่มหลังข้อความ 1.5 วินาที */
+        max-width: 500px;
+        position: absolute;
+        font-size: 40px;
+        top: 1500px;
+        left: 700px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของ /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของหน้าจอ */
+
+        /* height: auto; */
+        /* margin-top: 20px; เว้นระยะห่างจากข้อความ */
+        border-radius: 10px; /* มุมมนสวยงาม */
+      }
+
+      /* คีย์เฟรมสำหรับ Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0; /* จุดเริ่มต้น */
+          transform: translateY(20px); /* เลื่อนลงเล็กน้อย */
+        }
+        to {
+          opacity: 1; /* จบที่โปร่งใส 100% */
+          transform: translateY(0); /* ย้ายกลับขึ้นมา */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ข้อความที่ต้องการให้เฟดขึ้น -->
+    <div class="container">
+      <div class="fade-in">
+        <a href="content.html"
+          >Hello! I'm Kit, I'm a Web Developer from Bangkok</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

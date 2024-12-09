@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content</title>
+    <style>
+      /* จัดการพื้นหลังและข้อความ */
+      body {
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(
+          to bottom,
+          #050635,
+          #16115b,
+          #2f4788
+        ); /* ไล่สีม่วงพาสเทล */
+        /* display: flex; */
+        /* justify-content: center; */
+        align-items: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      /* สร้าง Animation ค่อยๆ เฟดขึ้น */
+
+      /* เอฟเฟกต์เฟดสำหรับรูปภาพ */
+      .fade-in-img {
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards 0.5s; /* เริ่มหลังข้อความ 1.5 วินาที */
+        max-width: 500px;
+        position: absolute;
+        top: 50px;
+        border: 6px solid white;
+        left: 50px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของหน้าจอ */
+
+        /* height: auto; */
+        /* margin-top: 20px; เว้นระยะห่างจากข้อความ */
+        border-radius: 10px; /* มุมมนสวยงาม */
+      }
+
+      .content {
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards 0.5s; /* เริ่มหลังข้อความ 1.5 วินาที */
+        max-width: 500px;
+        position: absolute;
+        top: 15px;
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        /* font-weight: <weight>; */
+        font-style: normal;
+        font-size: 40px;
+        left: 650px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของหน้าจอ */
+
+        /* height: auto; */
+        /* margin-top: 20px; เว้นระยะห่างจากข้อความ */
+        border-radius: 10px; /* มุมมนสวยงาม */
+      }
+
+      a:hover {
+        color: rgb(184, 189, 192);
+      }
+
+      a,
+      a:focus,
+      a:active {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .profile {
+        top: 170px;
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        /* font-weight: <weight>; */
+        font-style: normal;
+        left: 700px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของหน้าจอ */
+
+        /* height: auto; */
+        /* margin-top: 20px; เว้นระยะห่างจากข้อความ */
+        border-radius: 10px; /* มุมมนสวยงาม */
+      }
+
+      .edu {
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        /* font-weight: <weight>; */
+        font-style: normal;
+
+        top: 250px;
+        left: 700px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของ /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของหน้าจอ */
+
+        /* height: auto; */
+        /* margin-top: 20px; เว้นระยะห่างจากข้อความ */
+        border-radius: 10px; /* มุมมนสวยงาม */
+      }
+
+      .act {
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        /* font-weight: <weight>; */
+        font-style: normal;
+
+        top: 330px;
+        left: 700px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของ /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของหน้าจอ */
+
+        /* height: auto; */
+        /* margin-top: 20px; เว้นระยะห่างจากข้อความ */
+        border-radius: 10px; /* มุมมนสวยงาม */
+      }
+
+      .cer {
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        /* font-weight: <weight>; */
+        font-style: normal;
+        top: 410px;
+        left: 700px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของ /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        /* ติดที่ขวาของหน้าจอ */
+
+        /* height: auto; */
+        /* margin-top: 20px; เว้นระยะห่างจากข้อความ */
+        border-radius: 10px; /* มุมมนสวยงาม */
+      }
+
+      .description {
+        opacity: 0;
+
+        animation: fadeIn 0.5s ease-in-out forwards 0.5s; /* เริ่มหลังข้อความ 1.5 วินาที */
+        max-width: 500px;
+        position: absolute;
+        font-size: 20px;
+      }
+
+      .back {
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+        font-size: 20px;
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        /* font-weight: <weight>; */
+        font-style: normal;
+        animation: fadeIn 0.5s ease-in-out forwards;
+      }
+
+      /* คีย์เฟรมสำหรับ Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0; /* จุดเริ่มต้น */
+          transform: translateY(20px); /* เลื่อนลงเล็กน้อย */
+        }
+        to {
+          opacity: 1; /* จบที่โปร่งใส 100% */
+          transform: translateY(0); /* ย้ายกลับขึ้นมา */
+        }
+      }
+    </style></head
+  
+  <body>
+    <div>
+      <!-- ข้อความที่ต้องการให้เฟดขึ้น -->
+
+      <div class="content">
+        <h1>Content</h1>
+      </div>
+
+      <div class="profile description">
+        <h2><a href="Pro1.html">▶ Profile</a></h2>
+      </div>
+
+      <div class="edu description">
+        <h2><a href="edu.html">▶ Education </a></h2>
+      </div>
+
+      <div class="act description">
+        <h2><a href="act.html">▶ Activities </a></h2>
+      </div>
+
+      <div class="cer description">
+        <h2><a href="cer.html"> ▶ Certificate</a></h2>
+      </div>
+
+      <!-- รูปภาพที่ต้องการให้เฟดขึ้น -->
+      <div class="kitpng">
+        <img
+          width="450"
+          height="600"
+          src="kit.png"
+          alt="Kit Image"
+          class="fade-in-img"
+        />
+      </div>
+    </div>
+
+    <div class="back">
+      <a href="fianl.html"><div class="back">Back</div></a>
+    </div>
+  </body>
+</html>
