@@ -59,7 +59,7 @@
         /* font-weight: <weight>; */
         font-style: normal;
         font-size: 40px;
-        left: 650px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        left: 580px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
         /* ติดที่ขวาของหน้าจอ */
 
         /* height: auto; */
@@ -68,7 +68,7 @@
       }
 
       a:hover {
-        color: rgb(184, 189, 192);
+        color: rgb(255, 255, 255);
       }
 
       a,
@@ -79,12 +79,13 @@
       }
 
       .profile {
+        color: rgba(255, 255, 255, 0.6);
         top: 170px;
         font-family: "Rubik", sans-serif;
         font-optical-sizing: auto;
         /* font-weight: <weight>; */
         font-style: normal;
-        left: 700px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        left: 670px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
         /* ติดที่ขวาของหน้าจอ */
 
         /* height: auto; */
@@ -93,13 +94,14 @@
       }
 
       .edu {
+        color: rgba(255, 255, 255, 0.6);
         font-family: "Rubik", sans-serif;
         font-optical-sizing: auto;
         /* font-weight: <weight>; */
         font-style: normal;
 
         top: 250px;
-        left: 700px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        left: 670px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
         /* ติดที่ขวาของ /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
         /* ติดที่ขวาของหน้าจอ */
 
@@ -109,13 +111,14 @@
       }
 
       .act {
+        color: rgba(255, 255, 255, 0.6);
         font-family: "Rubik", sans-serif;
         font-optical-sizing: auto;
         /* font-weight: <weight>; */
         font-style: normal;
 
         top: 330px;
-        left: 700px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        left: 670px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
         /* ติดที่ขวาของ /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
         /* ติดที่ขวาของหน้าจอ */
 
@@ -125,12 +128,13 @@
       }
 
       .cer {
+        color: rgba(255, 255, 255, 0.6);
         font-family: "Rubik", sans-serif;
         font-optical-sizing: auto;
         /* font-weight: <weight>; */
         font-style: normal;
         top: 410px;
-        left: 700px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
+        left: 670px; /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
         /* ติดที่ขวาของ /* ติดที่ด้านบนของหน้าจอเมื่อเลื่อน */
         /* ติดที่ขวาของหน้าจอ */
 
@@ -159,6 +163,32 @@
         font-style: normal;
         animation: fadeIn 0.5s ease-in-out forwards;
       }
+      .background-image{
+        border: 6px solid white;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        border-radius: 30px;
+        width: 40%; /* ปรับขนาดรูปภาพให้กินพื้นที่ครึ่งหนึ่ง */
+        height: 30%;
+        border: center==;
+        animation: slideIn 1.5s ease-out forwards;
+        transform: rotate(-30deg); /* ทำมุมเอียง */
+        opacity: 0.5; /* ปรับความโปร่งใส */
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%); /* เริ่มจากด้านซ้าย (นอกจอ) */
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0); /* เลื่อนไปตำแหน่งปัจจุบัน */
+          opacity: 0.3  ;
+          transform: rotate(-30deg);  
+        }
+      }
 
       /* คีย์เฟรมสำหรับ Animation */
       @keyframes fadeIn {
@@ -183,7 +213,7 @@
 
       <div class="profile description">
         <h2><a href="Pro1.html">▶ Profile</a></h2>
-      </div>
+      </div>  
 
       <div class="edu description">
         <h2><a href="edu.html">▶ Education </a></h2>
@@ -212,5 +242,6 @@
     <div class="back">
       <a href="fianl.html"><div class="back">Back</div></a>
     </div>
+    <div class="background-image">aaa</div>
   </body>
 </html>

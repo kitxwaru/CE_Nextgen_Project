@@ -1,0 +1,65 @@
+.title h1 {
+    background-color: darkblue;
+    margin: 8px;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 2em;
+    font-family: monospace;
+    color: white;
+    text-align: center;
+}
+.abt-me h3 {
+    font-size: 1.5em;
+    font-family: monospace;
+    border-style: none none solid none;
+    border-color: darkblue;
+    margin: 10px;
+}
+.abt-me img, iframe {
+    margin: auto auto;
+    display: block;
+}
+.abt-me ul {
+    background-color: aliceblue;
+    padding: 5px;
+    margin: 25px;
+    border-radius: 10px;
+
+}
+.abt-me p {
+    background-color: aliceblue;
+    padding: 5px;
+    margin: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+.interest h3 {
+    font-size: 1.5em;
+    font-family: monospace;
+    border-style: none none solid none;
+    border-color: darkblue;
+    margin: 10px;
+}
+.interest ul {
+    background-color: aliceblue;
+    padding: 5px;
+    margin: 25px;
+    border-radius: 10px;
+}
+.more h3 {
+    font-size: 1.5em;
+    font-family: monospace;
+    border-style: none none solid none;
+    border-color: darkblue;
+    margin: 10px;
+}
+.more p {
+    background-color: aliceblue;
+    padding: 5px;
+    margin: 25px;
+    border-radius: 10px;
+}
+.info {
+    background-color: skyblue;
+    padding: 25px;
+}

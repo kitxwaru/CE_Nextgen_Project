@@ -83,7 +83,7 @@
 
       padding-left: 20px;
 
-      height: 550px;
+      height: 590px;
       border-radius: 20px;
       flex-basis: 60%;
       margin-top: 30px;
@@ -116,6 +116,10 @@
       animation: fadeIn 0.5s ease-in-out forwards;
     }
 
+    .kitpng{
+      
+    }
+
     .nn {
       display: flex;
 
@@ -134,19 +138,72 @@
         transform: translateY(0); /* ย้ายกลับขึ้นมา */
       }
     }
+
+    .kitpng{
+       
+        
+        position: absolute;
+        top: 100px;
+        left: -100px;
+        border-radius: 30px;
+        width: 40%; /* ปรับขนาดรูปภาพให้กินพื้นที่ครึ่งหนึ่ง */
+        height: 30%;
+        
+        animation: slideIn 1.5s ease-out forwards;
+        transform: rotate(-10deg); /* ทำมุมเอียง */
+        opacity: 0.5; /* ปรับความโปร่งใส */
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%) rotate(-30deg); ; /* เริ่มจากด้านซ้าย (นอกจอ) */
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0); /* เลื่อนไปตำแหน่งปัจจุบัน */
+          opacity: 0.3  ;
+          transform: rotate(-10deg);  
+        }
+      }
+
+
+      .kitzpng {
+    position: absolute;
+    top: 150px;
+    right: -350px; /* เริ่มนอกจอด้านขวา */
+    border-radius: 30px;
+    width: 40%; /* ปรับขนาดรูปภาพ */
+    height: auto;
+    animation: slideOut 1.25s ease-in forwards; /* ทำให้ animation ทำงาน */
+    transform: rotate(-10deg); /* ทำมุมเอียง */
+    opacity: 0.5; /* ปรับความโปร่งใส */
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(100%) rotate(-30deg); /* เลื่อนจากด้านขวา */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) rotate(10deg); /* มาหยุดที่ตำแหน่งปัจจุบัน */
+        opacity: 0.3;
+    }
+}
+
   </style>
+ 
 
   <body>
     <div class="nn">
       <div class="kitpng">
-        <img
-          width="450"
-          height="600"
-          src="kit.png"
-          alt="Kit Image"
-          class="fade-in-img"
-        />
+        <video width="320" height="600" style=";" src="k4.mp4" autoplay loop muted></video>
       </div>
+      <div class="kitzpng">
+        <video width="320" height="600" style=";" src="y.mp4" autoplay loop muted></video>
+      </div>
+
+      
+      
 
       <div class="bb">
         <div class="name description">
@@ -154,14 +211,20 @@
           <h1 style="width: max">Age : 17 Year</h1>
           <h1 style="width: max">Nationality : Thai</h1>
           <h1 style="width: max">Studied at : Debsirin School (Grade5)</h1>
-          <h1 style="width: max">Plan Studied : Science, Math, Technology</h1>
+          <h1 style="width: max">Plan Studied : Science Math-Technology</h1>
           <h1 style="width: max">Skill :</h1>
           <img width="100" height="100" src="irb.png" alt="" />
           <img width="90" height="100" src="crb.png" alt="" />
           <img width="160" height="100" src="jrb.png" alt="" />
           <img width="160" height="100" src="airb.png" alt="" />
+          <img width="250" height="100" src="urb.png" alt="" />
           <h1 style="width: max">
-            Contact : IG : kitxwaru , Tel : +66 80-143-4020
+            Contact : <br>IG  :  kitxwaru <br> 
+            Tel  :  +66 80-143-4020
+            <br>LineID  :  0801434020
+            <br>
+            Email  :  all01323846@gmail.com
+
           </h1>
         </div>
       </div>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myButton">Click Here</button>
+    <div id="content"></div>
+    <script>
+        const content = document.getElementById("content");
+        const btn = document.getElementById("myButton");
+
+        function changeColor(li_arr) {
+            const rb_color = ["red", "orange", "yellow", "green", "cyan", "blue", "purple"]
+            for (let i=0; i<li_arr.length; i++) {
+                li_arr[i].style.background = rb_color[i%rb_color.length];
+            }
+        }
+
+        function createList(arr) {
+            const ul_el = document.createElement("ul");
+    
+            content.appendChild(ul_el)
+
+            const li_arr = [];
+
+            for (const item of arr) {
+                const li_el = document.createElement("li");
+                li_el.innerText = item;
+                ul_el.appendChild(li_el);
+                li_arr.push(li_el);
+            }
+
+            return li_arr;
+        }
+
+        const favFood = ["ขาหมู", "ก๋วยเตี๋ยว", "ไก่ย่าง", "หมูกรอบ"];
+        const favSub = ["พละ", "คอมพิวเตอร์"];
+        const favHob = ["เล่นเกม", "ดูหนัง", "อ่านการ์ตูน", "เล่นกีฬา", "นอน"];
+
+        const li_arr = [];
+
+        let btn_state = false;
+
+        btn.addEventListener("click", function () {
+            if (btn_state != true){
+                const name = document.createElement("h1");
+
+                name.innerText = "นายซีอี เน็กซ์เจน";
+
+                content.appendChild(name);
+
+                li_arr.push(createList(favFood));
+                li_arr.push(createList(favSub));
+                li_arr.push(createList(favHob));
+
+                btn_state = true;
+            }
+            else {
+                btn.style.display = "none";
+                for (const liArr of li_arr) {
+                    changeColor(liArr)
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>

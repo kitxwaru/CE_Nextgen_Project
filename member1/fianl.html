@@ -28,7 +28,7 @@
       /* สร้าง Animation ค่อยๆ เฟดขึ้น */
       .fade-in {
         opacity: 0; /* เริ่มจากโปร่งใส */
-        animation: fadeIn 2s ease-in-out forwards; /* เรียกใช้ Animation */
+        animation: fadeIn 4s ease-in-out forwards; /* เรียกใช้ Animation */
         font-size: 40px; /* ขนาดข้อความ */
         position: sticky;
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -38,7 +38,7 @@
       }
 
       a:hover {
-        color: rgb(168, 175, 178);
+        color: rgb(202, 203, 203);
       }
 
       a,
@@ -170,6 +170,31 @@
         border-radius: 10px; /* มุมมนสวยงาม */
       }
 
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* ให้วิดีโอคลุมพื้นที่ทั้งหมด */
+        opacity: 0; /* ซ่อนวิดีโอ */
+        transition: opacity 0.5s ease-in-out; /* เอฟเฟกต์การเปลี่ยนความโปร่งใส */
+        z-index: -1; /* ให้อยู่หลังข้อความ */
+      }
+
+      .hover-text {
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1;
+        position: relative;
+        text-align: center;
+      }
+
+      /* เมื่อ Hover ที่ข้อความ ให้วิดีโอแสดง */
+      .hover-text:hover ~ video {
+        opacity: 1; /* แสดงวิดีโอ */
+      }
+
       /* คีย์เฟรมสำหรับ Animation */
       @keyframes fadeIn {
         from {
@@ -186,11 +211,20 @@
   <body>
     <!-- ข้อความที่ต้องการให้เฟดขึ้น -->
     <div class="container">
-      <div class="fade-in">
-        <a href="content.html"
-          >Hello! I'm Kit, I'm a Web Developer from Bangkok</a
-        >
+      <div class="hover-text">
+        <a href="content.html" style="animation: fadeIn 2s ease-in-out forwards;">Hello! I'm Kit, I'm a Web Developer from Bangkok</a>
       </div>
-    </div>
+
+      <video muted loop autoplay>
+        <source src="e.mp4" type="video/mp4" />
+      
+      </video>
+
+     
+
+
+
+    <!-- วิดีโอพื้นหลัง -->
+   
   </body>
 </html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topic">
+        <h4>My Profile</h4>
+        <h1>Kongpob Vatnanutanon</h1>
+        <hr class="hr">
+    </div>
+    <div class="info">
+        <img width="80%" src="Lerler.jpg" alt="my picture">
+        <p id="dynamic-text" class="hidden">Hello my name is LerLer, </p>
+        <button class="btn" onclick="revealText()">Click to Reveal Text</button>
+    </div>
+    <div class="skill">
+        <div class="skill-item">
+            <img src="download.jpg" alt="computer skill" class="img-skills">
+            <div class="skill-info">
+                <h2>Coding Skills</h2>
+                <ul>
+                    <li>Python</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>JavaScript</li>
+                    <li>Html</li>
+                </ul>
+            </div>
+        </div>
+        <div class="skill-item">
+            <img src="Vector Icon ⛥.jpg" alt="game creator skill" class="img-skills">
+            <div class="skill-info">
+                <h2>Game Creator Skills</h2>
+                <ul>
+                    <li>unity</li>
+                    <li>scratch</li>
+                    <li>unreal engine</li>
+                </ul>
+            </div>
+        </div>
+        <div class="skill-item">
+            <img src="Arduino Black Logo PNG vector in SVG, PDF, AI, CDR format.jpg" alt="arduino skill" class="img-skills">
+            <div class="skill-info">
+                <h2>Arduino Project</h2>
+                <ul>
+                    <li>Coin Sorter</li>
+                    <li>Vacuum Robot</li>
+                    <li>Alcohol Dispenser</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="overall">
+        <div class="more">
+            <h1>More About Me</h1>
+            <p>contact: 081-***-****</p>
+            <p>ig: fule08</p>
+            <p>line: ******</p>
+            <p>email: ******@gmail.com</p>
+        </div>
+        <div class="more2">
+            <h1>More Info</h1>
+            <img src="websiteQRCode_noFrame.png" alt="qr for more info">
+        </div>
+    </div>
+
+    <script>
+        function revealText() {
+            const textElement = document.getElementById("dynamic-text");
+            // textElement.innerHTML += "        ";
+            textElement.classList.remove("hidden");
+        }
+    </script>
+</body>
+<style>
+    * {
+        background-color: #EAD8C0;
+        font-family: "Lucida Handwriting", "Courier New", cursive;
+    }
+    .topic h4 {
+        font-size: 2.5vw;
+        background-color: #A79277;
+        padding: 5px 15px;
+        border-radius: 100px;
+        display: inline-block;
+        color: white;
+    }
+    .topic h1 {
+        font-size: 5vw;
+        color: black;
+        text-align: center;
+    }
+    .info .btn {
+        width: 40vw;
+        height: 8vw;
+        font-size: 2.5vw;
+    }
+    .hr {
+        border: 5px solid #A79277;
+        border-radius: 10px 10px 10px 10px;
+    }
+    .topic img {
+        display: block;
+        margin: 20;
+    }
+    .info {
+        display: grid;
+        border-radius: 10px;
+        margin: 50px;
+        grid-template-columns: auto auto;
+        padding: 50px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .info p {
+        background-color: #FFF2E1;
+        border-radius: 10px;
+        display: flex;
+        font-size: 2.5vw;
+        margin: 10px;
+        padding: 10px;
+        text-align: left;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    .info p.hidden {
+        visibility: hidden; 
+        opacity: 0;
+    }
+    .info p:not(.hidden) {
+        visibility: visible;
+        opacity: 1;
+    }
+    .skill {
+        display: grid;
+        background-color: #A79277;
+        border-radius: 10px;
+        margin: 5px;
+        grid-template-columns: auto auto auto;
+        padding: 20px;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+    .skill-item {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+    }
+    .img-skills {
+        width: 20vw;
+        height: 20vh;
+        transition: opacity 1s ease;
+    }
+    .skill-info {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1s ease;
+        text-align: left;
+        font-size: 0.8em;
+        background-color: #D1BB9E;
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .skill-info h2 {
+        background-color: #FFF2E1;
+        text-align: center;
+    }
+    .skill-item:hover .skill-info {
+        visibility: visible;
+        opacity: 1;
+    }
+    #dynamic-text{
+        white-space: pre;
+    }
+    @media screen and (min-width: 768px) {
+        .img-skills {
+            width: 20vw;
+            height: 40vh;
+        }
+        .skill-info {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1s ease;
+        text-align: left;
+        font-size: 1.5em;
+        background-color: #D1BB9E;
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+        }
+    }
+    .info {
+        display: grid;
+        background-color: #D1BB9E;
+        border-radius: 10px;
+        margin: 10px;
+        grid-template-columns: auto auto;
+        padding: 10px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .overall {
+        display: grid;
+        border-radius: 10px;
+        margin: 10px;
+        grid-template-columns: 50% 50%;
+        padding: 10px;
+        justify-content: space-between;
+
+    }
+    .more2{
+        display:flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    .more2 img {
+        width: 70%;
+    }
+    .more2 h1 {
+        font-size: 2.5vw;
+        background-color: #A79277;
+        padding: 5px 15px;
+        border-radius: 100px;
+        display: inline-block;
+        color: white;
+    }
+    .more h1{
+        font-size: 2.5vw;
+        background-color: #A79277;
+        padding: 5px 15px;
+        border-radius: 100px;
+        display: inline-block;
+        color: white;
+    }
+    .more p {
+        font-size: 2vw;
+        width: 50vw;
+        background-color: #FFF2E1;
+        border-radius: 10px;
+        padding: 15px;
+        width: 70%;
+    }
+</style>
+</html>

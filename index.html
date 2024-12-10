@@ -4,19 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruam</title>
+    <style>
+     
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        a:hover {
+        color: rgb(202, 203, 203);
+      }
+
+      a,
+      a:focus,
+      a:active {
+        text-decoration: none;
+        color: inherit;
+      }
+
+        .kit a {
+            color: rgb(255, 255, 255);
+            
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 1;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            font-size: 3rem;
+            top: 300px;
+            text-align: center;
+        }
+       
+      body {
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(
+          to bottom,
+          #0b2561,
+          #2443a0,
+          #588de8
+          
+          
+        );
+      }
+
+      .background-image{
+        border: 6px solid white;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        top: 300px;
+        left: px;
+        border-radius: 30px;
+        width: 300%; /* ปรับขนาดรูปภาพให้กินพื้นที่ครึ่งหนึ่ง */
+        height: 30%;
+        border: center==;
+        animation: slideIn 1.5s ease-out forwards;
+        transform: rotate(0deg); /* ทำมุมเอียง */
+        opacity: 0.5; /* ปรับความโปร่งใส */
+      }
+      a:hover {
+        color: rgb(155, 160, 160);
+      }
+
+      a,
+      a:focus,
+      a:active {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%); /* เริ่มจากด้านซ้าย (นอกจอ) */
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0); /* เลื่อนไปตำแหน่งปัจจุบัน */
+          opacity: 0.3  ;
+          transform: rotate(0deg);  
+        }
+      }
+
+      /* คีย์เฟรมสำหรับ Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0; /* จุดเริ่มต้น */
+          transform: translateY(px); /* เลื่อนลงเล็กน้อย */
+        }
+        to {
+          opacity: 1; /* จบที่โปร่งใส 100% */
+          transform: translateY(0); /* ย้ายกลับขึ้นมา */
+        }
+      }
+
+    </style>
 </head>
-
-<style>
-
-
-</style>
-
 <body>
+    <div class="content">
+        <div class="kit">
+            <a href="member1/fianl.html" style="animation: fadeIn 3s ease-in-out forwards;">Click To Portfolio Kit</a>
+        </div>
+        <div class="kit">
+            <a href="member2/index.html" style="animation: fadeIn 3s ease-in-out forwards;">Click To Portfolio LerLer</a>
+        </div>
+        <div class="kit">
+            <a href="member3/index.html" style="animation: fadeIn 3s ease-in-out forwards;">Click To Portfolio Punna</a>
+        </div>
+        
+    <video class="background-video" autoplay loop muted>
+        <source src="k4.mp4" type="video/mp4">
+    </video>
+</div>
 
-    <div class="kit"> <a href="member1/fianl.html">Portfolio Kit</a></div>
-    <div class="kit"> <a href="member2/index.html">Portfolio LerLer</a></div>
-    <div class="kit"> <a href="member3/index.html">Portfolio Punna</a></div>
+<div class="background-image"></div>
+
     
-    
+
 </body>
 </html>

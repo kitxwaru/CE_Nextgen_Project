@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-itemA">A</div>
+        <div class="grid-itemB">
+            <div class="grid-itemb">B1</div>
+            <div class="grid-itemb">B2</div>
+            <div class="grid-itemb">B3</div>
+            <div class="grid-itemb">B4</div>
+        </div>
+
+    </div>
+    
+</body>
+<style>
+    .grid-container {
+        background-color: white;
+        width: 600px;
+        height: 200px;
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 10px;
+        align-items: stretch;
+    }
+    .grid-itemA {
+        background-color: red;
+        border-style: solid;
+        border-color: white;
+    }
+    .grid-itemB {
+        display: grid;
+        grid-template-columns: auto auto;
+        background-color: white;
+        border-style: solid;
+        border-color: white;
+    }
+    .grid-itemb {
+        display: grid;
+        background-color: blue;
+        border-style: solid;
+        border-color: white;
+    }
+</style>
+</html>
